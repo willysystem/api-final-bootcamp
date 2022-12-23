@@ -2,10 +2,15 @@ package testClean;
 
 import factoryRequest.FactoryRequest;
 import factoryRequest.RequestInfo;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.restassured.response.Response;
+
 import org.joda.time.DateTime;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import util.ApiConfiguration;
 import util.GetProperties;
@@ -36,7 +41,14 @@ public class ItemTest {
 
         }
     }
+
     @Test
+    @DisplayName("Verfy the test CRUD")
+    //@Description("This test case is to verify.......")
+    @Epic("Todo.ly")
+    @Feature("Login")
+    @Owner("Clasur")
+    //@Link("")
     public void verifyCRUDItem(){
         DateTime currentDate = DateTime.now();
         String itemName = "" + currentDate.getYear();
